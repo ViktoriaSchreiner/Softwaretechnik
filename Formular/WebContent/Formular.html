@@ -1,0 +1,28 @@
+<!--Aufgabe: Schreiben Sie eine einfache HTML Seite, die ein Formular enthält. 
+In dieses Formular kann man Text eingeben. Sobald man einen Button klickt, 
+wird dieser Text in die HTML-Seite eingefügt. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Formular mit JS-Funktion</title>
+<script type="text/javascript" src="FormularJS.js"></script>
+<meta name="author" content = "Viktoria" />
+<meta name="description" content="JS, HTML-form"/>
+</head>
+
+<body>
+	<h1>Das Formular manipuliert die Seite</h1>
+	<p id = "absatz"> Dieser Absatz wird gleich geändert
+	</p>
+	<form>
+		<input type = "button" onclick="replace()" value="Hier klicken">
+		<!-- Alternative:
+		<input type = "button" onclick="append()" value="Hier klicken">
+		 -->
+		<p><input type ="text" id="wert"></p>
+		<p id="absatz"></p>
+	</form>
+</body>
+</html>

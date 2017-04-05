@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Lebenslauf von Viktoria Schreiner</title>
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="Lebenslauf.css">
+<meta name="author" content = "Viktoria" />
+<meta name="description" content="Ein einfaches Beispiel für einen Lebenslauf in HTML"/>
+</head>
+
+<body>
+	<h1 class ="uppercase"> Schreiner  - Lebenslauf</h1>
+
+	<div class ="rechteSeite">
+	<img alt="Viktoria Schreiner" src="IMG_3682.JPG" height="125" width="175">
+	</div>
+	
+	<h2>Persönliche Daten</h2>	
+	<span class = "specialStyle">Geboren in: München </span><br>
+	<span>Familienstand: ledig</span>
+	<h2>zentrale Stationen</h2>
+	<hr>
+	<table>
+	<tbody>
+		<tr>
+			<th>Station</th>
+			<th>Beschäftigungsart</th>
+		</tr>
+		<tr>
+			<td> Bachelor-Studium</td>
+			<td> <a href ="http://www.oth-regensburg.de" target="_balnk">OTH Regensburg</a> 
+			, B.A. 
+			</td>
+		</tr>
+		<tr>
+		
+			<td> Master-Studium:</td>
+			<td>  
+			<a href ="http://www.htwg-konstanz.de" target="_blank">HTWG Konstanz</a>
+			, M.Sc.
+			</td>
+		</tr>
+		<tr>
+			<td> Arbeitserfahrung_1:</td>
+			<td> Gigatronik GmbH Ingolstadt </td>
+		</tr>
+		<tr>
+			<td> Arbeitserfahrung_2:</td>
+			<td> Gigatronik GmbH München </td>
+		</tr>
+	</tbody>
+	</table>
+	
+	<h2> Hobbies</h2>
+	<hr>
+	<ul>
+		<li>Segeln </li>
+		<li>Klavier spielen</li>
+		<li>Motorrad fahren</li>
+		<li> Programmieren</li>	
+	</ul>
+	<h2> Hinterlassen Sie mir doch eine Nachricht</h2>
+ 	<form action="http://www.duckduckgo.com">
+  		Eintrag:<br>  		
+  		<input type="text" name="formularEintrag" value="Hier Text eintragen"><br>
+  		<p>Priorität <br>
+  			<input type="radio" name="prio" value="high" checked> sehr wichtig
+  			<input type="radio" name="prio" value="medium"> wichtig
+  			<input type="radio" name="prio" value="low"> eilt nicht
+  		</p>
+  		<p>Kategorisieren Sie das Thema<br>
+  			<select name="kategorieEintrag">
+  				<option selected="selected">Kategorie-Wahl</option>
+  				<option>Jobs</option>
+  				<option>Hobbies</option>
+  				<option>private Nachricht </option>
+  				<option>Sonstiges</option>
+  			</select> <br><br>
+  		
+  		  		
+  		<input type="submit" value="Ab die Post">
+	</form> 
+
+</body>
+</html>
