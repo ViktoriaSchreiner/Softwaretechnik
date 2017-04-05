@@ -1,0 +1,39 @@
+
+h1 {
+    color: navy;
+    margin-left: 20px; 
+  
+}
+
+h1.uppercase {
+    text-transform: uppercase;
+    font: sans-serif;
+}
+
+span.specialStyle{
+	 font: italic 14px/30px Georgia, serif;
+}
+
+
+body{
+	background-color: lightblue;
+}
+
+div.rechteSeite {
+	position: absolute;
+    top: 80px;
+    right: 10px;
+    width: 200px;
+    height: 100px;   
+}
+
+th {
+    background-color: #58ACFA;
+    color: white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
