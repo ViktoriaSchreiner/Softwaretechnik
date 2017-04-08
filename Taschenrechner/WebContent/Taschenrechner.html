@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript" src="Taschenrechner.js"></script>
+
+<title>Taschenrechner</title>
+</head>
+<body bgcolor=white>
+	<h1> Taschenrechner </h1>
+	<form name="Taschenrechner">
+		<table border=20  >
+		<tr>
+			<td bgcolor=lightgrey><input name = "Hauptanzeige"></td>
+			
+		</tr>
+		 <tr><td><table>
+		 <tr>
+			<td><input type = button value="   7   " onClick="Hinzufuegen('7')"></td>
+			<td><input type = button value="   8   " onClick="Hinzufuegen('8')"></td>
+			<td><input type = button value="   9   " onClick="Hinzufuegen('9')"></td>
+			<td><input type = button value="   *  "  onClick="Hinzufuegen('*')"></td>
+		</tr>
+		<tr>	
+			<td><input type = button value="   4   " onClick="Hinzufuegen('4')"> </td>
+			<td><input type = button value="   5   " onClick="Hinzufuegen('5')"></td>
+			<td><input type = button value="   6   " onClick="Hinzufuegen('6')"></td>
+			<td><input type = button value="   -   " onClick="Hinzufuegen('-')"></td>
+		</tr>
+		<tr>
+			<td><input type = button value="   1   " onClick="Hinzufuegen('1')"></td>
+			<td><input type = button value="   2   " onClick="Hinzufuegen('2')"></td>
+			<td><input type = button value="   3   " onClick="Hinzufuegen('3')"></td>
+			<td><input type = button value="   +  "  onClick="Hinzufuegen('+')"></td> 
+		</tr>
+		
+		<tr>
+			<td><input type= button value= "   =   " onClick="Ergebnis()"></td>
+			<td><input type= button value="   0   " onClick="Hinzufuegen('0')"></td>
+			<td><input type = reset value="   C   " onClick=Clear()></td>
+			<td><input type = reset value="   /   " onClick="Hinzufuegen('/')"></td>					
+		
+		</table>
+		</tr></table>	
+	</form>
+	
+	<div id="ergebnis">und das ergebnis ist: </div>	
+</body>
+</html>
