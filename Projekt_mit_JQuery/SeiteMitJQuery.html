@@ -1,0 +1,69 @@
+<!-- Aufgabe 4a: Binde JQuery ein, verwende die Funtionen SlideUp() und animoate -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Mein erstes JQuery-Projekt</title>
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="Lebenslauf.css">
+<!-- JQuery -->
+ <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+	function austauschen(){	
+			 $("#JQ1").slideUp();
+			 $("#JQ2").html("Aktueller Wohnort nicht verfügbar.");			
+			 $("h2").animate({fontSize:"50px"}, 'slow');
+		}
+</script>
+
+
+</head>
+<body>
+	<h1 class ="uppercase"> Schreiner  - Lebenslauf</h1>
+	<input type="button" onclick="austauschen()" value="bitte klicken"/>
+
+	<div class ="rechteSeite">
+	<img id="JQ1" alt="Viktoria Schreiner" src="IMG_3682.JPG" height="125" width="175">
+	</div>
+	
+	<h2>Wohnhaft</h2>
+	<div id = "JQ2"> Aktuell in Konstanz </div>		
+	<h2>Persönliche Daten</h2>	
+	<span class = "specialStyle"> Geboren in: München </span><br>
+	<span>Familienstand: ledig</span>
+	<h2>zentrale Stationen</h2>
+	<hr>
+	<table>
+	<tbody>
+		<tr>
+			<th>Station</th>
+			<th>Beschäftigungsart</th>
+		</tr>
+		<tr>
+			<td> Bachelor-Studium</td>
+			<td> <a href ="http://www.oth-regensburg.de" target="_balnk">OTH Regensburg</a> 
+			, B.A. 
+			</td>
+		</tr>
+		<tr>
+		
+			<td> Master-Studium:</td>
+			<td>  
+			<a href ="http://www.htwg-konstanz.de" target="_blank">HTWG Konstanz</a>
+			, M.Sc.
+			</td>
+		</tr>
+		<tr>
+			<td> Arbeitserfahrung_1:</td>
+			<td> Gigatronik GmbH Ingolstadt </td>
+		</tr>
+		<tr>
+			<td> Arbeitserfahrung_2:</td>
+			<td> Gigatronik GmbH München </td>
+		</tr>
+	</tbody>
+	</table>
+	
+
+</body>
+</html>
