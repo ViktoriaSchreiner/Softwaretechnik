@@ -1,0 +1,22 @@
+var txt = '<Bestellung nummer="A123">
+    <Besteller kdnr="GER">
+        <Vorname>Hans-Ulrich</Vorname>
+        <Nachname>Graf</Nachname>
+    </Besteller>
+    <Position>
+        <BestellPosition>1</BestellPosition>
+        <Produkt>
+            <Bestellnummer>A122</Bestellnummer>
+            <Name>Fön</Name>
+            <Preis>23,75</Preis>
+        </Produkt>
+    </Position>
+    <Position>
+        <BestellPosition>2</BestellPosition>
+        <Produkt>
+            <Bestellnummer>A122</Bestellnummer>
+            <Name>Tablet</Name>
+            <Preis>259</Preis>
+        </Produkt>
+    </Position>
+</Bestellung>'
