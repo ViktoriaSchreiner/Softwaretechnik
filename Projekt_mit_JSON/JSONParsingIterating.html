@@ -1,0 +1,59 @@
+<!-- 
+Aufgabe:  werten Sie mehrere Objekte der JSON-Datei aus, iterieren über alle Werte 
+und erzeugen daraus eine HTML-Tabelle. Beschränken Sie sich dabei auf die Attribute 
+"symbol", "name" und "price".  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iteration ueber JSON </title>
+    <script type = "text/javascript" src ="JSONObject.js"></script>
+    <script type="text/javascript" src="./WebContent/js/jquery-3.1.1.js"></script>
+    <script type = "text/javascript">
+
+        var resources = aufzahleung.list.resources;
+
+        $(document).ready(function(){
+        for (r in resources){
+        $("#tabelle").append(
+        "<tr><td>"
+         + resources[r].resource.fields.name +
+        "</td><td>"
+        + resources[r].resource.fields.price +
+        "</td><td>"
+        + resources[r].resource.fields.symbol +
+        "</td></tr>"       
+        );
+        }
+        });
+
+    </script>
+    <!-- Internal style sheet -->
+    <style>
+    table {
+    	width: 100%;
+    	text-align: left;
+    }
+	th, td {
+    	border-bottom: 1px solid #ddd;
+    	padding: 15px;
+	}
+</style>
+</head>
+<body>
+
+
+<h1> Seite mit JS</h1>
+
+<h2>HTML Tabelle</h2>
+<div></div>
+<table id = "tabelle">
+    <tr >
+         <th>Name </th>
+         <th>Price </th>
+         <th>Symbol </th>
+        
+    </tr>
+</table>
+</body>
+</html>

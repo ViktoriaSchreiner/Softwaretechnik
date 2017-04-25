@@ -1,4 +1,4 @@
- var text = {
+ var aufzahleung = {
 		 "list" : { 
 			 "meta" : { 
 			 "type" : "resource-list",
@@ -2810,8 +2810,7 @@
 			 "volume" : "0"
 			 }
 			 }
-			 }
-			 ,
+			 },
 			 {
 			 "resource" : { 
 			 "classname" : "Quote",
