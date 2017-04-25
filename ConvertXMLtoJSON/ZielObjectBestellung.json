@@ -1,0 +1,25 @@
+	"bestellung": {
+		"nummer": "A123",
+		"Besteller":{ 
+			"kdnr": "GER"
+			"Vorname": "Hans-Ulrich",
+			"Nachname": "Graf"
+		},
+		"Position": [
+			{
+			"BestellPosition": "1";
+			"Produkt": {
+					"Bestellnummer": "A122",
+					"Name": "Fön",
+					"Preis": "23,75"
+				}
+			},
+			{"BestellPosition": "2";
+				"Produkt": {
+					"Bestellnummer": "A122",
+					"Name": "Tablet",
+					"Preis": "259"
+					}
+			}
+		]
+	}
