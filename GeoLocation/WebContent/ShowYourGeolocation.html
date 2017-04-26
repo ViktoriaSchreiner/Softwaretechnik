@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Geolocation</title>
+<script>
+
+getLocation(showPosition)
+/*
+ * Das ist eine Callback-Funktion (=Rückruf-funktion):  Funktion, die einer anderen Funktion als Parameter übergeben 
+ * und von dieser erst später unter definierten Bedingungen mit definierten Argumenten aufgerufen wird.
+ */
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+         ausgabeabe.innerHTML = "Geolocation von Browser nicht unterstützt.";
+    }
+}
+
+function showPosition(position) {
+     ausgabe.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+</head>
+<body>
+
+<h1>Die aktuelle Geolocation ist:</h1>
+
+
+<p id="ausgabe"></p>
+
+
+
+</body>
+</html>
