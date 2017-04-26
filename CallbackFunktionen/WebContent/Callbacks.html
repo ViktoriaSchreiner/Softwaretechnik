@@ -11,9 +11,21 @@ Wenn Sie noch mehr lernen wollen, dann erweitern Sie die Funktionen a und b um e
 <head>
 <meta charset="ISO-8859-1">
 <title>Callbacks</title>
+<style>
+button{
+	border-radius: 8px;
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+</style>
 <script>
 
-start();
 
 function a(text){
 	alert("Ich bin Funktion a()    " + text);
@@ -36,7 +48,9 @@ function start(){
 </script>
 </head>
 <body>
-<h1> und jetzt komme ich</h1>
+<h1> Callback-Funktion auslösen</h1>
+<br>
+<button onclick =start()>Hier klicken</button>
 
 </body>
 </html>
