@@ -8,33 +8,64 @@ TODO: Frage an Herrn Johner: Manuell oder durch eine Funktion
 <head>
 <meta charset="ISO-8859-1">
 <title>Converting XML to JSON</title>
-
-<script type="text/javascript">
-
-function doSomething(){
-    var lbl = document.getElementById('messageLabel');    
-    lbl.innerHTML = "Sorry, not yet implemented";    
-  }  	
-
-</script>
 </head>
 <body>
 
-<h3>Es folgt ein input XML</h3>
+<h3>Es folgt ein XML</h3>
 <xmp id="xmlin">
 <Bestellung nummer="A123">
-<Besteller kdnr="GER"><Vorname>Hans-Ulrich</Vorname><Nachname>Graf</Nachname></Besteller>
-<Position><BestellPosition>1</BestellPosition><Produkt>
-<Bestellnummer>A122</Bestellnummer><Name>Fön</Name><Preis>23,75</Preis></Produkt></Position>
-<Position><BestellPosition>2</BestellPosition><Produkt><Bestellnummer>A122</Bestellnummer><Name>Tablet</Name>
-<Preis>259</Preis></Produkt>
-</Position>
-</Bestellung>
+            <Besteller kdnr="GER">
+                <Vorname>Hans-Ulrich</Vorname>
+                <Nachname>Graf</Nachname>
+            </Besteller>
+            <Position>
+                <BestellPosition>1</BestellPosition>
+                <Produkt>
+                    <Bestellnummer>A122</Bestellnummer>
+                    <Name>Fön</Name>
+                    <Preis>23,75</Preis>
+                </Produkt>
+            </Position>
+            <Position>
+                <BestellPosition>2</BestellPosition>
+                <Produkt>
+                    <Bestellnummer>A122</Bestellnummer>
+                    <Name>Tablet</Name>
+                    <Preis>259</Preis>
+                </Produkt>
+            </Position>
+        </Bestellung>
 </xmp>
-<h3 >Umgewandelt in JSON</h3>
+<h3 >Umgewandelt in JSON: </h3>
 
-  <div id="messageLabel"></div>
-<input type="button" value="Converter" onclick="doSomething();" />
+  <div></div>
+<xmp>
+ bestellung: {
+		"nummer": "A123",
+		"Besteller":{ 
+			"kdnr": "GER"
+			"Vorname": "Hans-Ulrich",
+			"Nachname": "Graf"
+		},
+		"Position": [
+			{
+			"BestellPosition": "1";
+			"Produkt": {
+					"Bestellnummer": "A122",
+					"Name": "Fön",
+					"Preis": "23,75"
+				}
+			},
+			{"BestellPosition": "2";
+				"Produkt": {
+					"Bestellnummer": "A122",
+					"Name": "Tablet",
+					"Preis": "259"
+					}
+			}
+		]
+	}
+</xmp>
 
 </body>
 </html>
