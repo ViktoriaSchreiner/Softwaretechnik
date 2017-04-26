@@ -1,0 +1,42 @@
+<!-- 
+Aufgabe:
+Schreiben Sie zwei einfachste Funktionen a() und b(), die beispielsweise nur einen Alert beinhalten z.B. alert("Bin Funktion a");. 
+Schreiben Sie eine dritte Funktion funktionausführen(einefunktion). Diese Funktion ruft die übergebene Funktion auf.
+Schreiben Sie eine vierte Funktion start(), die die Funktion funktionausführen zweimal nacheinander aufruft. Einmal über gibt sie dazu die Funktion a(), einmal die Funktion b().
+Die übergebenen Funktionen nennt man CallBacks.
+Wenn Sie noch mehr lernen wollen, dann erweitern Sie die Funktionen a und b um einen Übergabeparameter: a(text), b(text). Den übergebenen Text geben Sie beim Alert mit aus. Zudem ergänzen Sie die Funktion funktionausführen(einefunktion, text) um einem zweiten Übergabeparameter und modifizieren die Methode start() entsprechend
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Callbacks</title>
+<script>
+
+start();
+
+function a(text){
+	alert("Ich bin Funktion a()    " + text);
+}
+
+function b(text){
+	alert("Ich bin Funktion b()    " +text);
+}
+
+function ausfuehreneFunktion(einefunktion){
+	var text = "Ich bin die ausfuehrende Funktion";
+	einefunktion(text);
+}
+
+function start(){
+	ausfuehreneFunktion(a);
+	ausfuehreneFunktion(b);
+}
+
+</script>
+</head>
+<body>
+<h1> und jetzt komme ich</h1>
+
+</body>
+</html>
