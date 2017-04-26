@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HTML5 - Web Storage</title>
+<script>
+function save() {
+	window.localStorage.setItem('localInp1', document.storage.localInp1.value);
+	window.localStorage.setItem('localInp2', document.storage.localInp2.value);
+}
+
+function restore() {
+	document.storage.localOut1.value = window.localStorage.getItem('localInp1');
+	document.storage.localOut2.value = window.localStorage.getItem('localInp2');
+}
+</script>
+</head>
+<body>
+
+	<h1>Lokales Speichern im Browser</h1>
+	<form name="storage">
+	<table>
+		<tr>
+			<td> Inhalt des ersten Textfelds ist:</td>
+			<td><input type="text" name="localInp1" placeholder ="Hier steht dein Text"></td>
+		</tr>
+		<tr>
+			<td>Inhalt des zweiten Textfeldes ist:</td>
+			<td><input type="text" name="localInp2"  placeholder ="Hier steht dein Text"></td>
+		</tr>
+		<tr> 
+			<td>Ausgabe des Feldes1:</td>
+			<td><input type="text" id="localOut1"></td>
+		</tr>
+		<tr>
+			<td>Ausgabe des Feldes2:</td>
+			<td><input type="text" id="localOut2"></td>
+		</tr>
+	</table>
+	</form>		
+	<input type = "button" onclick="save()" value="Hier speichern">
+	<input type = "button" onclick="restore()" value="Hier wiederherstellen">
+</body>
+</html>
