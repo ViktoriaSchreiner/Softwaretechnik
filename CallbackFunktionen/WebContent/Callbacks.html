@@ -20,17 +20,17 @@ function a(text){
 }
 
 function b(text){
-	alert("Ich bin Funktion b()    " +text);
+	alert("Ich bin Funktion b()    " + text);
 }
 
-function ausfuehreneFunktion(einefunktion){
-	var text = "Ich bin die ausfuehrende Funktion";
+function ausfuehreneFunktion(einefunktion, text){
 	einefunktion(text);
 }
 
 function start(){
-	ausfuehreneFunktion(a);
-	ausfuehreneFunktion(b);
+	var text = "Ich komme aus Start";
+	ausfuehreneFunktion(a, text);
+	ausfuehreneFunktion(b, text);
 }
 
 </script>
