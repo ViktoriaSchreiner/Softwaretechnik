@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+
+<video controls> 
+  <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+  <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
+  <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+</video>
+<p>
+Video gefunden auf 
+<a href="http://www.techslides.com/" target="_blank">Tech Slide</a>.
+</p>
+<br>
+
+<!-- 
+Name
+Email-Adresse
+Hausnummer zwischen 0-200
+Geburtsdatum (muss in der Vergangehheit liegen
+ -->
+ <h2>kleines Formular mit "neuen" HTML5 Tags</h2>
+ <form>
+ <table>
+ 	<tr>
+ 		<td>Name: </td>
+ 		<td><input type=text placeholder="Max Mustermann" required></td>
+ 	</tr>
+ 	<tr>
+ 		<td>Hausnummer: </td>
+ 		<td><input type="number" min="0" max="200" required></td>
+ 	</tr>
+ 	<tr>
+ 		<td>Geburtsdatum: </td>
+ 		<td><input type="date" max="2017-04-26" required></td>
+ 	</tr>
+ </table>
+  	<button type="sumit">Daten check</button>
+ </form>
+
+</body> 
+</html>
