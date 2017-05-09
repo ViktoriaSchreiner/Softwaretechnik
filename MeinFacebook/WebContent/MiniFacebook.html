@@ -1,36 +1,11 @@
-<!-- 
-Aufgabe:
-Die angezeigte Webseite, welche die Tabelle mit den persönlichen Daten enthält, 
-soll jetzt auch editierbar sein: In der dritten Spalte befindet sich nun ein Button "ändern". 
-Drückt man diesen Knopf, so erscheint ein Eingabefeld (auf der gleichen oder auf einer neuen 
-Seite), in das man den neuen Wert eingeben kann. Nach "submit" wird die Tabelle mit dem neuen 
-Wert aktualisiert angezeigt. Die anderen Tabellenzeilen bleiben unverändert.
-Passen Sie Ihr Servlet so an, dass es eine dreispaltige Tabelle mit den Formularfeldern 
-ausgibt. Außerdem sollte es in der Lage sein, sich alle Werte zu "merken".  
-Tipp: Nutzen Sie die HttpSession.
- -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>MiniFacebook</title>
 
-<style type="text/css">
-    <!-- Internal style sheet -->
-    <style>
-   <!-- Internal style sheet -->
-    <style>
-    table {
-    	width: 100%;
-    	text-align: left;
-    }
-	th, td {
-    	border-bottom: 1px solid #ddd;
-    	padding: 15px;
-	}
-	tr:hover {background-color: #f5f5f5}
-	
-</style>
+<link rel="stylesheet" type="text/css" href="css/frontpage.css">
+<script type="text/javascript" src="js/einstellungen.js"></script>
 </head>
 <body>
 
@@ -45,22 +20,26 @@ Tipp: Nutzen Sie die HttpSession.
 			</tr>
 			<tr>
 				<td>Vorname</td>
-				<td id="vorname">Max</td>
+				<td><input type="text" name="vorname" id = "vorname" value = "Max"></td>
+				<!-- <td><input type="button" onclick =changeSettings('vorname') value="ändern"></td> -->
 				<td><button>ändern</button></td>
 			</tr>	
 			<tr>
 				<td>Nachname</td>
-				<td id="nachname">Mustermann</td>
-				<td><button>ändern</button></td>
+				<td><input type="text" name="nachname" id="nachname" value = "Mustermann"></td>
+				<!--<input type="button" onclick =changeSettings('nachname') value="ändern"> -->
+				 <td><button>ändern</button></td>
 			</tr>
 			<tr>
 				<td>Wohnort</td>
-				<td id=wohnort>Konstanz</td>
-				<td><button>ändern</button></td>
+				<td><input type="text" name="wohnort" id="wohnort" value = "Konstanz"></td>
+				<!-- <input type="button" onclick =changeSettings('wohnort') value="ändern">-->
+				<td><button>ändern</button></td> 
 			</tr>
 			<tr>
 				<td>Hobby</td>
-				<td id="hobby">Programmieren</td>
+				<td><input type="text" name="hobby" id="hobby" value = "Programmieren"></td>
+				<!-- <input type="button" onclick =changeSettings('hobby') value="ändern"> -->
 				<td><button>ändern</button></td>
 			</tr>		
 		</table>
