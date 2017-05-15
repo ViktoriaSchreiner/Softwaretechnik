@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dynamische Auflistung</title>
+<script>
+function dynamicAppend(){
+	console.log("In Funktion 'ausgeben'");
+	var input = document.getElementById("input");
+	var url = "http://localhost:8080/DynamischMitAjax/ServletListNames\?wert=" + escape(input.value);
+	var req;
+	<!--Check status of XMLHttpObject-->
+	if (window.XMLHttpRequest) {
+	  req = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+	  req = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	req.onreadystatechange = function() {
+	  if (req.readyState == 4) {
+	    if (req.status == 200) {
+	      var ergebnis = req.responseText;
+	      document.getElementById("ergebnisList").innerHTML = ergebnis;
+	    }
+	  }
+	};
+	req.open("GET", url, true);
+	req.send(null);
+	
+}
+</script>
+</head>
+<body>
+<h1>Es gibt viele Vornamen</h1>
+<p>Gebe hier einen Vornamen ein	 <input type="text" id="input" onkeyup=dynamicAppend()></p>
+<!-- 
+<input method ="get" action="DynamischMitAjax/ServletListNames" type="text"></p>
+-->
+
+<p id="ergebnisList" >Hier erscheint eine Auflistung passender Vornamen</p>
+<!-- Hier soll Liste  -->
+</body>
+</html>
