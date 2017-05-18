@@ -26,7 +26,6 @@ public class ServletListNames extends HttpServlet {
 	 */
 	public ServletListNames() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public String[] readLines(String filename) throws IOException {
@@ -47,14 +46,9 @@ public class ServletListNames extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		String parameter = request.getParameter("wert");
 		System.out.println("Anfrage: " + parameter);
-		//System.out.println(System.getProperty("user.dir"));
-		String[] arr = readLines(
-				"C:\\Users\\Vk\\Studium\\4_Semester\\SoTe2\\Repository_sote2\\Softwaretechnik\\DynamischMitAjax\\WebContent\\Data\\vornamen.txt");
-
-		/*for (String name : arr) {
-			writer.write("<p> " + name + "</p>");
-		}
-		*/
+		System.out.println(System.getProperty("user.dir"));
+		//relative path to file
+		String[] arr = readLines(getServletContext().getRealPath("/Data/vornamen.txt"));
 
 		for (String name : arr) {
 			boolean istrue = true;
