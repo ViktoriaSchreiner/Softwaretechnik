@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dynamische Auflistung</title>
+ <script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+<script>
+//verkürzte Variante ajax via jquery Bibliothek
+function dynamicAppend(){
+	$("#ergebnisList").load("http://localhost:8080/DynamischNachladenMitJQuery/ServletListNames\?wert=" + escape(input.value));
+};
+</script>
+</head>
+<body>
+	<h1>Es gibt viele Vornamen</h1>
+	<p>
+		Gebe hier einen Vornamen ein <input type="text" id="input"
+			onkeyup=dynamicAppend()>
+	</p>
+<!-- 
+<input method ="get" action="DynamischNachladenMitJQuery/ServletListNames" type="text"></p>
+-->
+
+	<p id="ergebnisList">Hier erscheint eine Auflistung passender
+		Vornamen</p>
+	<!-- Hier soll Liste angehangen werden -->
+</body>
+</html>
